@@ -1,27 +1,27 @@
 const express = require('express')
 const mongoose=require('mongoose')
 const cors=require('cors')
-const port =  process.env.PORT;
 // Load environment variables from .env file
 require('dotenv').config();
 
 //Object create  in express
 const app=express()
+const port =  process.env.PORT;
 
 //Middleware to check or structure the data coming from frontend
 app.use(express.json())
 
+app.use(express.urlencoded({extended: false}))
+
 // Allow requests only from a specific domain
 const corsOptions = {
     origin: 'https://pro-manage-hub-inky.vercel.app/', // Replace with your frontend domain
-    optionsSuccessStatus: 200 // some legacy browsers (e.g., IE11) choke on 204
+    optionsSuccessStatus: 200,
+    allowedHeaders: ['Content-Type', 'Authorization'] // some legacy browsers (e.g., IE11) choke on 204
   };
 
 // Middleware to enable CORS
 app.use(cors(corsOptions));
-
-app.use(express.urlencoded({extended: false}))
-app.set('view engine', 'ejs')
 
 //For routing to routes
 const authRouter = require('../backend_server/Router/authroute');
@@ -30,6 +30,10 @@ const projectRouter=require('../backend_server/Router/projectroute');
 //to give api common routing
 app.use('/api',authRouter)
 app.use('/api',projectRouter)
+
+app.set('view engine', 'ejs')
+
+
 
 
 //DB Connection
