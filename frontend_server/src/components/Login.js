@@ -36,7 +36,7 @@ function Login(){
         }
       }
 
-      const response= await axios.post('http://localhost:3000/api/login',data,config)
+      const response= await axios.post('https://promanagehub.onrender.com/api/login',data,config)
       const {token,user}=response.data;
     
       // console.log(response)

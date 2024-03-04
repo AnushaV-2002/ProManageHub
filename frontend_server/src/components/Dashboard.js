@@ -48,7 +48,7 @@ function Dashboard(){
       try {
      
         const userId = localStorage.getItem('userId');
-        const response = await axios.get(`http://localhost:3000/api/projects/${userId}`, config);
+        const response = await axios.get(`https://promanagehub.onrender.com/api/projects/${userId}`, config);
         if (response.status === 200) {
           setProjects(response.data);
         }
@@ -126,7 +126,7 @@ function Dashboard(){
       Project_Stack: data.Project_Stack.split(',').map(tech => tech.trim())     
     };
    console.log("ProjectData", ProjectData)
-    const response = await axios.post('http://localhost:3000/api/project', ProjectData, config)
+    const response = await axios.post('https://promanagehub.onrender.com/api/project', ProjectData, config)
    
     const newProject = response.data;
 
@@ -156,7 +156,7 @@ function Dashboard(){
             return project["_id"] === projectId;
         });
 
-        const response = await axios.put(`http://localhost:3000/api/project/${projectId}`, data, config);
+        const response = await axios.put(`https://promanagehub.onrender.com/api/project/${projectId}`, data, config);
         const updatedProjectData = response.data;
 
         const updatedProjects = [...projects];
@@ -178,7 +178,7 @@ function Dashboard(){
    const userId = localStorage.getItem('userId');
    const projectId = data["_id"];
 
-   const response = await axios.delete(`http://localhost:3000/api/project/${projectId}`, config)
+   const response = await axios.delete(`https://promanagehub.onrender.com/api/project/${projectId}`, config)
    
    const deletedProjectId = response.data["_id"];
 

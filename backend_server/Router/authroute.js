@@ -170,7 +170,7 @@ router.post('/forget-password', (req,res)=>{
          Email: user.Email
       }, secret,{expiresIn: "15m"});
 
-      const link = `http://localhost:3000/api/reset-password/${user._id}/${token}`
+      const link = `https://promanagehub.onrender.com/api/reset-password/${user._id}/${token}`
     //   console.log(link)
       
       const transporter =  nodemailer.createTransport({

@@ -11,14 +11,14 @@ const app=express()
 //Middleware to check or structure the data coming from frontend
 app.use(express.json())
 
-// // Allow requests only from a specific domain
-// const corsOptions = {
-//     origin: 'https://your-frontend-domain.com', // Replace with your frontend domain
-//     optionsSuccessStatus: 200 // some legacy browsers (e.g., IE11) choke on 204
-//   };
+// Allow requests only from a specific domain
+const corsOptions = {
+    origin: 'https://pro-manage-hub-inky.vercel.app/', // Replace with your frontend domain
+    optionsSuccessStatus: 200 // some legacy browsers (e.g., IE11) choke on 204
+  };
 
 // Middleware to enable CORS
-app.use(cors());
+app.use(cors(corsOptions));
 
 app.use(express.urlencoded({extended: false}))
 app.set('view engine', 'ejs')

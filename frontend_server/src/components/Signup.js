@@ -33,7 +33,7 @@ function Signup(){
       }
     }
     
-    const response= await axios.post('http://localhost:3000/api/signup',data,config)
+    const response= await axios.post('https://promanagehub.onrender.com/api/signup',data,config)
     const {Message}=response.data;
     // console.log("message", Message)
     if(response.status===200){
@@ -79,7 +79,7 @@ function Signup(){
             emailAvailable: async (value) => {
               try {
                 // API request to check if the email is available
-                const response = await axios.post(`http://localhost:3000/api/user/${value}`);
+                const response = await axios.post(`https://promanagehub.onrender.com/api/user/${value}`);
                 const isAvailable = !response.data; // If response.data is falsy, email is available
       
                 return isAvailable || "Email already exists!";

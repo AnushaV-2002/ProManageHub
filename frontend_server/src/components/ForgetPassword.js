@@ -33,7 +33,7 @@ function ForgetPassword(){
              }
             }
 
-           const response = await axios.post('http://localhost:3000/api/forget-password', data, config)
+           const response = await axios.post('https://promanagehub.onrender.com/api/forget-password', data, config)
            if(response.status===200){
               //  console.log(response.data)
                setToastMessage(`Password Reset Link is sent to your Email, Check Your Email!`);

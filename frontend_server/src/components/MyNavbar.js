@@ -26,7 +26,7 @@ function MyNavbar() {
 
       if (userId) {
         // Fetch user object from API endpoint
-        const response = await axios.get(`http://localhost:3000/api/user/${userId}`);
+        const response = await axios.get(`https://promanagehub.onrender.com/api/user/${userId}`);
         const userInfo = response.data;
         // console.log("userinfo", userInfo)
         // Update user state with the fetched user object
@@ -47,7 +47,7 @@ function MyNavbar() {
     localStorage.removeItem('user');
     localStorage.removeItem('userId');
 
-    const response=await axios.post('http://localhost:3000/api/logout')
+    const response=await axios.post('https://promanagehub.onrender.com/api/logout')
     console.log(response)
     navigate('/'); // Navigate to the home page after logout
   }
