@@ -13,15 +13,15 @@ app.use(express.json())
 
 app.use(express.urlencoded({extended: false}))
 
-// Allow requests only from a specific domain
-const corsOptions = {
-    origin: 'https://pro-manage-hub-inky.vercel.app/', // Replace with your frontend domain
-    optionsSuccessStatus: 200,
-    allowedHeaders: ['Content-Type', 'Authorization'] // some legacy browsers (e.g., IE11) choke on 204
-  };
+// // Allow requests only from a specific domain
+// const corsOptions = {
+//     origin: 'https://pro-manage-hub-inky.vercel.app/', // Replace with your frontend domain
+//     optionsSuccessStatus: 200,
+//     allowedHeaders: ['Content-Type', 'Authorization'] // some legacy browsers (e.g., IE11) choke on 204
+//   };
 
 // Middleware to enable CORS
-app.use(cors(corsOptions));
+app.use(cors());
 
 //For routing to routes
 const authRouter = require('../backend_server/Router/authroute');
