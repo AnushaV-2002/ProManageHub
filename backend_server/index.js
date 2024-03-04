@@ -23,6 +23,13 @@ app.use(express.urlencoded({extended: false}))
 // Middleware to enable CORS
 app.use(cors());
 
+app.use(function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "https://pro-manage-hub-inky.vercel.app");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    next();
+});
+
+
 //For routing to routes
 const authRouter = require('../backend_server/Router/authroute');
 const projectRouter=require('../backend_server/Router/projectroute');
