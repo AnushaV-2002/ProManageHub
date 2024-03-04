@@ -1,0 +1,9 @@
+.modalform{
+    max-width: 100%;
+}
+.dashboard_buttons{
+    padding:0.5em;
+    background-color: #e1c16e;
+    outline: none;
+    border:none;
+}

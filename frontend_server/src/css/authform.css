@@ -1,0 +1,93 @@
+.container{
+
+    max-width: 100%;
+    height:auto;
+    padding:10px;
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: minmax(auto,60px);
+    align-items: center;  
+    justify-items: center;
+   
+
+}
+
+.title,.sub-title{
+    color:black;
+    align-self: end;
+    text-align: center;
+    font-weight: 600;
+}
+
+.grid-container{
+    width: auto;
+    height:auto;
+    background-color: #FAF9F6;
+    box-shadow: 0 2px 4px rgb(0 0 0 /10%), 0 2px 16px rgb(0 0 0 /10%);
+    padding:20px;
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: minmax(auto,60px);
+    /* align-items: center;
+    justify-items: center; */
+}
+
+.authform{
+  
+    display:grid;
+    grid-template-columns: 1fr;
+    gap:10px;
+    margin-bottom: 18px;
+    align-items: center;
+}
+
+.authinput{
+  
+    padding:15px;
+    border: 1px solid #dddfe2;
+    border-radius: 6px;
+    font-size:15px;
+    cursor:auto;
+}
+
+.authinput::placeholder{
+    font-size: 17px;
+    color:grey;
+}
+.authinput:focus{
+    outline:none;
+    /* border-color: #eed6c4; */
+    border-color: grey;
+}
+
+.grid-container .authform button{
+    width:100%;
+    padding:10px;
+    font-size: 20px;
+   cursor:pointer;
+    color:black;
+    background-color: #e1c16e;
+    border:1px solid #e1c16e;
+    border-radius: 6px;
+   margin: 5px auto;
+}
+
+.grid-container .authform p{
+    text-align: center;
+    color:#36454F;
+    cursor:pointer;
+}
+
+.error{
+    color:red !important;
+}
+
+.auth_links{
+    color:black !important;
+}
+
+@media all and (max-width:700px){
+    .grid-container{
+        padding:10px;
+    }
+}

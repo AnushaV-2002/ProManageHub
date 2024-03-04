@@ -1,0 +1,157 @@
+.dashboard_container{
+    max-width:100%;
+    height:auto;
+    margin-top:5em;
+    display:grid;
+    grid-template-columns: 1fr;
+    gap:1em;
+}
+
+
+.search_container{
+    max-width: 100%;
+    display:grid;
+    grid-template-columns: 1fr;
+    margin:0 auto;
+ 
+
+}
+
+.search_bar {
+    display: flex;
+    align-items: center;
+    background-color: #FAF9F6; /* Background color for the search bar */
+    border-radius: 5px; /* Rounded corners */
+    padding: 5px; /* Add padding for space around the search icon and input field */
+  }
+
+  .search_icon {
+    margin-right: 5px; /* Spacing between the search icon and input field */
+  }
+  
+.search_input{
+    flex: 1; /* Allow the input field to grow and fill available space */
+    border: none; /* Remove default border */
+    outline: none; 
+    background-color: #FAF9F6;
+    padding: 8px;
+   border-radius: 40px;
+}
+
+
+.add_button{
+    padding-right: 4em;
+    justify-self: end;
+}
+
+.projects_container{
+    max-width:100%;
+    padding:1em;
+    /* background-color: green; */
+    height:auto;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap:1em;
+    justify-items: center;
+   
+}
+
+.project_card{
+    width: 80%;
+    padding:1em;
+    background-color: #FAF9F6;
+    border-radius: 5px;
+    display:grid;
+    grid-template-columns: 1fr;
+    gap:0.7em;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+.project_container{
+    display:grid;
+    grid-template-columns: 1fr;
+    
+}
+.project_header{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+}
+.project-title{
+    justify-self: start;
+    font-weight: 600;
+}
+.project_id{
+    font-size: 0.8em;
+}
+.project_desc{
+    text-align: justify;
+}
+.project_desc span{
+    display: block;
+    font-weight: 600;
+}
+.tech_stack{
+    font-weight: 600;
+    text-align: justify;
+}
+.edit_icon{
+  justify-self: end;
+}
+
+.delete_button{
+    align-self: end;
+    justify-self: end;
+}
+
+.modalinput{
+    padding:15px;
+    border: 1px solid #dddfe2;
+    border-radius: 6px;
+    font-size:15px;
+    cursor:auto;
+}
+
+.modalinput::placeholder{
+    font-size: 17px;
+    color:grey;
+}
+.modalinput:focus{
+    outline:none;
+    /* border-color: #eed6c4; */
+    border-color: grey;
+}
+
+.error_message{
+   
+    text-align: center;
+    padding: 2em;
+    font-weight: 700;
+    
+}
+.projects_container .error_message {
+    grid-column: span 2; 
+  }
+@media all and (max-width:900px){
+    .projects_container{
+      
+        padding:0.5em;
+       
+   
+        display:grid;
+        grid-template-columns: 1fr;
+      
+      
+    }
+}
+
+@media all and (max-width:500px){
+    .add_button{
+        padding-right: 1em;
+        justify-self: center;
+    }
+
+ 
+
+    
+}

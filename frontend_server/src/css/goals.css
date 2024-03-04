@@ -1,0 +1,53 @@
+.Goals_container{
+    background-color: #FAF9F6;
+    padding:1em;
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: minmax(auto,60px);
+    justify-content: center;
+    align-items: center;
+}
+
+.Goals_parent{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    gap:1em;
+}
+.Goals_heading{
+    text-align: center;
+}
+.Goals_content{
+    padding: 10px;
+    text-align: justify;
+    
+}
+
+.Goals_image{
+    width:80%;
+    border-radius: 2px;
+    height:18.75em;
+    background-image: url("../images/vision_mission.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@media all and (max-width:1000px){
+
+    .Goals_parent{
+        padding:10px;
+        display:grid;
+        grid-template-columns: 1fr;
+        justify-items: center;
+        align-items: center;
+        gap:1em;
+    }
+}
+
+@media all and (max-width:700px){
+    .Goals_image{
+        width:80%;
+        height:13em;
+    }
+}
