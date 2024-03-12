@@ -24,8 +24,17 @@ app.use(express.urlencoded({extended: false}))
 app.use(cors());
 
 app.use(function(req, res, next) {
-    res.header("Access-Control-Allow-Origin", "https://promanagehub.vercel.app");
-    res.header("Access-Control-Allow-Origin", "https://anushaviswanathan.vercel.app/");
+    const allowedOrigins = [
+        "https://promanagehub.vercel.app",
+        "https://anushaviswanathan.vercel.app"
+    ];
+    
+    // Check if the request origin is included in the allowedOrigins array
+    const origin = req.headers.origin;
+    if (allowedOrigins.includes(origin)) {
+        res.header("Access-Control-Allow-Origin", origin);
+    }
+    
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
     next();
 });
