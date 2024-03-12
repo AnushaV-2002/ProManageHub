@@ -30,7 +30,7 @@ const onSubmit=async function(data){
      }
    }
    
-   const response= await axios.post('http://localhost:3000/api/query',data,config)
+   const response= await axios.post('https://promanagehub.onrender.com/api/query',data,config)
    if(response.status===200){
     reset()
     toast.success('We have recieved your query, we will get back to you soon...');
